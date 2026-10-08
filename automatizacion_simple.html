@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>automatizacion simple</title>
+    <link rel="stylesheet" href="automatizacion_simple.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="automatizacion_simple.js" defer></script>
+</head>
+<body>
+    <!------------------------------------------>
+    <!--|estructuracion_automatizacion_simple|-->
+    <!------------------------------------------>
+    <main class="contenedor_automatizacion_simple">
+        <!-- Encabezado de la aplicación -->
+        <header class="encabezado_automatizacion_simple">
+            <div class="icono_automatizacion_simple">AS</div>
+            <h1>Automatización Simple</h1>
+            <p>Mensajes que cambian automáticamente.</p>
+        </header>
+        <!-- Tarjeta donde se muestran los mensajes -->
+        <section class="tarjeta_mensaje_automatizacion">
+            <span class="etiqueta_automatizacion_simple">MENSAJE ACTUAL</span>
+            <div class="indicador_automatizacion_simple">
+                <span class="punto_automatizacion_simple"></span>
+                <span id="estado_automatizacion_simple">En pausa</span>
+            </div>
+            <!-- Texto que cambiará mediante JavaScript -->
+            <p id="texto_automatizacion_simple"
+                class="texto_automatizacion_simple">
+                ¡Bienvenido a la automatización simple!
+            </p>
+            <!-- Contador de mensajes disponibles -->
+            <p class="contador_automatizacion_simple">
+                Mensaje <span id="numero_mensaje_automatizacion">1</span>
+                de <span id="total_mensajes_automatizacion">5</span>
+            </p>
+        </section>
+        <!-- Controles de reproducción automática -->
+        <section class="controles_automatizacion_simple">
+            <h2>Controles</h2>
+            <div class="botones_automatizacion_simple">
+                <button type="button" id="boton_iniciar_automatizacion">
+                    Iniciar
+                </button>
+                <button type="button" id="boton_pausar_automatizacion">
+                    Pausar
+                </button>
+                <button type="button" id="boton_siguiente_automatizacion">
+                    Siguiente
+                </button>
+            </div>
+            <!-- Selector del tiempo entre mensajes -->
+            <div class="grupo_intervalo_automatizacion">
+                <label for="intervalo_automatizacion_simple">
+                    Cambiar mensaje cada:
+                </label>
+                <select id="intervalo_automatizacion_simple">
+                    <option value="2">2 segundos</option>
+                    <option value="3" selected>3 segundos</option>
+                    <option value="5">5 segundos</option>
+                    <option value="10">10 segundos</option>
+                </select>
+            </div>
+        </section>
+        <!-- Formulario para crear mensajes personalizados -->
+        <section class="seccion_personalizar_automatizacion">
+            <h2>Personalizar mensajes</h2>
+            <form id="formulario_automatizacion_simple">
+                <label for="nuevo_mensaje_automatizacion">
+                    Escribe un mensaje
+                </label>
+                <textarea id="nuevo_mensaje_automatizacion"
+                    placeholder="Escribe tu propio mensaje..."
+                    rows="3" maxlength="180" required></textarea>
+                <button type="submit" id="boton_agregar_automatizacion">
+                    Agregar mensaje
+                </button>
+            </form>
+            <!-- Lista de mensajes agregados por el usuario -->
+            <div class="lista_personalizada_automatizacion">
+                <h3>Mis mensajes</h3>
+                <ul id="lista_mensajes_automatizacion"></ul>
+            </div>
+        </section>
+        <!-- Mensaje informativo de las acciones realizadas -->
+        <p id="aviso_automatizacion_simple"
+            class="aviso_automatizacion_simple"
+            role="status" aria-live="polite"></p>
+    </main>
+</body>
+</html>
